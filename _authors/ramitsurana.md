@@ -7,7 +7,7 @@ twitter: ramitsurana
 website: ramitsurana.github.io
 linkedin: https://in.linkedin.com/in/ramitsurana
 github: ramitsurana
-image: /assets/img/authors/ramit.png
+image: /assets/img/authors/ramit.jpg
 ---
 
 Some important points about me:
