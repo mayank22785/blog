@@ -16,15 +16,15 @@ In AWS [re:Invent 2015][13], Amazon introduced a new service in security domain 
 
 ![Inspector][11]
 
-The name Inspector for this service fits in. As in real life, Inspector is respnsible for individuals to follow protocals, defined gidelines. 
+The name Inspector for this service fits in. As in real life, Inspector is responsible for individuals to follow protocols, defined guidelines. 
 Same way in AWS, Inspector is responcible for security and complaince issues in your application. It analyze the behavior of the applications deployed on the AWS instances to identify potential security issues. 
-Amazon Inspector is a set of built-in rules, best practices against which the application will be tested. And Inspector genrates a detailed report of the findings and loopholes in the application and also suggests steps for remidiation.
+Amazon Inspector is a set of built-in rules, best practices against which the application will be tested. And Inspector generates a detailed report of the findings and loopholes in the application and also suggests steps for remediation.
 
 Basiclly its a combination of [Security Monkey][7] and [Conformity Monkey][8].
 
 ##Why is Inspector required?
 
-Inspector is automated, repetable, and low cost(no licencing for properoty tools)
+Inspector is automated, repeatable, and low cost(no licencing for property tools)
 Its serverless, one less server to maintain ;-)
 It is built on Amazon's 20 years of operation knowledge 
 No dedicated Security team required 
@@ -52,7 +52,6 @@ Tag the instances with application specific information; a collection of AWS res
 
 
 > ![Assessment overview][9]
-
 Image Source: AWS Website
 
 ###4. Start the assessment
@@ -63,7 +62,7 @@ As, the application being exercised, an Inspector agents running on each instanc
 All the collected data is analyzed and compared against the set of built-in security rules selected in **Step:3**
 
 ###6: The Report
-After the assessment, Inspector generates a detailed report of any vulnerability or compliance issue and prioritize steps for remideations. 
+After the assessment, Inspector generates a detailed report of any vulnerability or compliance issue and prioritize steps for remediation. 
 
 The preview launch of the Inspector will have the following set of rules:
 
@@ -76,7 +75,7 @@ The preview launch of the Inspector will have the following set of rules:
 
 Ge your hands dirty by [Signup][10] for the Inspector preview  
 
-I will revisit this section again to dive deeper into configuration, usecase, advantages once Amazon Inspector is full blown service in AWS offerings.
+I will revisit this section again to dive deeper into configuration, use-case, advantages once Amazon Inspector is full blown service in AWS offerings.
 
 Please leave your comments below if you have any doubts or questions.
 
