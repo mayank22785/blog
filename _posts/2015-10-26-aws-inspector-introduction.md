@@ -32,15 +32,15 @@ No dedicated Security team required
 
 ##How does it work?
 
-**1. Install agents on EC2 instances**
+###1. Install agents on EC2 instances
 	This Inspector agent collects all the data from ec2 instances to the Inspector. Agent can be installed as in;
 	Download "`wget https://s3-us-west-2.amazonaws.com/inspector.agent.us-west-2/latest/install" and "sudo bash install`". 
 	Can start / stop the agent by "`sudo /etc/init.d/inspector start/stop`"
 
-**2. Tag **
+###2. Tag 
 	Tag the instances with application specific information; a clooection of AWS resources that counts for your application.
 
-**3. Configure Amazon Inspector**
+###3. Configure Amazon Inspector
 	Create an assessment, give it a logical name
 	Add Set-of-Rules required for assessment 
 	Define the deuration of the assessment
@@ -49,14 +49,14 @@ No dedicated Security team required
 
 Image Source: AWS Website
 
-**4. Start the assessment**
-**5. Exercise the application**
+###4. Start the assessment
+###5. Exercise the application
 	Manually testing the application, automation etc
 
 As, the application being exercised, an Inspector agents running on each instances collects file system, process and network activities. Agents also collects the information about other AWS services used by the application like s3 endpoints, network traffic between ensctances. All these informations from agents provides Inspector a complete understanding of the application. 
 All the collected data is analyzed and compared against the set of built-in security rules selected in Step:3
 
-**6: The Report**
+###6: The Report
 	After the assessment, Inspector genrates a detailed report of any vulnerability or complaince issue and priortize steps for remideations. 
 
 
