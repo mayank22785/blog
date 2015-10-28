@@ -9,7 +9,7 @@ excerpt: "This is a Amazon VPC tutorial, which provides information about your v
 ---
 
 
-This is a Amazon VPC tutorial, which provides information about your virtual private cloud (VPC) and its subnets.
+This is a Amazon VPC tutorial, which provides information about your virtual private cloud (VPC) and its internals.
 
 ## [Amazon VPC][6] 
 `Virtual Private Cloud` is your way of controlling the networking layer on which your infrastructure run. It is a virtual network and logically linked to your AWS account.
@@ -52,7 +52,7 @@ VPC is almost works like VRF. However, it uses a proprietary service called **"M
 
 Let's see how a node in a network talks to other node.
 
-> Let's say for example, `10.0.1.5` wants to talk to `10.0.1.8`. 
+> Let's say for example, `10.0.0.5` wants to talk to `10.0.0.8`. 
 
 ![L2-Ethernet][9] 
 
@@ -90,7 +90,7 @@ Following steps occurs in the communication:
 The above scenario is for the two instances within a subnet communication. That is Layer-2. How does packets travel between subnets (Layer-3). 
 Lets first see, how packets travel in physical network.
 
-> In the scenario `10.0.0.5` wants to talk to `10.0.1.8`. Let me skim through this scenario
+> **In the below scenario `10.0.0.5` wants to talk to `10.0.1.8`. Let me skim through this scenario**
 
 ![L3-IP_Routing][12]
 
