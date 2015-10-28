@@ -33,9 +33,9 @@ No dedicated Security team required
 ##How does it work?
 
 ###1. Install agents on EC2 instances
-	This Inspector agent collects all the data from ec2 instances to the Inspector. Agent can be installed as in;
-	Download "`wget https://s3-us-west-2.amazonaws.com/inspector.agent.us-west-2/latest/install" and "sudo bash install`". 
-	Can start / stop the agent by "`sudo /etc/init.d/inspector start/stop`"
+This Inspector agent collects all the data from ec2 instances to the Inspector. Agent can be installed as in;
+Download "`wget https://s3-us-west-2.amazonaws.com/inspector.agent.us-west-2/latest/install" and "sudo bash install`". 
+Can start / stop the agent by "`sudo /etc/init.d/inspector start/stop`"
 
 ###2. Tag 
 	Tag the instances with application specific information; a clooection of AWS resources that counts for your application.
