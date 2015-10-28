@@ -17,7 +17,7 @@ In AWS [re:Invent 2015][13], Amazon introduced a new service in security domain 
 ![Inspector][11]
 
 The name Inspector for this service fits in. As in real life, Inspector is responsible for individuals to follow protocols, defined guidelines. 
-Same way in AWS, Inspector is responcible for security and complaince issues in your application. It analyze the behavior of the applications deployed on the AWS instances to identify potential security issues. 
+Same way in AWS, Inspector is responsible for security and compliance issues in your application. It analyze the behavior of the applications deployed on the AWS instances to identify potential security issues. 
 Amazon Inspector is a set of built-in rules, best practices against which the application will be tested. And Inspector generates a detailed report of the findings and loopholes in the application and also suggests steps for remediation.
 
 Basiclly its a combination of [Security Monkey][7] and [Conformity Monkey][8].
