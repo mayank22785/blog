@@ -46,6 +46,7 @@ No dedicated Security team required
 	Define the deuration of the assessment
 
 ![Assessment overview][9]
+
 Image Source: AWS Website
 
 **4. Start the assessment**
