@@ -52,13 +52,14 @@ Tag the instances with application specific information; a collection of AWS res
 
 
 > ![Assessment overview][9]
+
 Image Source: AWS Website
 
 ###4. Start the assessment
 ###5. Exercise the application
 Manually testing the application, automation etc
 
-	As, the application being exercised, an Inspector agents running on each instances collects file system, process and network activities. Agents also collects the information about other AWS services used by the application like s3 endpoints, network traffic between ensctances. All these informations from agents provides Inspector a complete understanding of the application. 
+As, the application being exercised, an Inspector agents running on each instances collects file system, process and network activities. Agents also collects the information about other AWS services used by the application like s3 endpoints, network traffic between ensctances. All these informations from agents provides Inspector a complete understanding of the application. 
 All the collected data is analyzed and compared against the set of built-in security rules selected in **Step:3**
 
 ###6: The Report
