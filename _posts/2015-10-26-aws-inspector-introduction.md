@@ -9,7 +9,7 @@ excerpt: "This is an Amazon Inspector tutorial for beginners. Application assess
 ---
 
 
-Amazon has introduced a new service in security domain known as [Amazon Inspector][6]. 
+In AWS [re:Invent 2015][13], Amazon introduced a new service in security domain known as [Amazon Inspector][6]. 
 
 
 ##What is Amazon Inspector?
@@ -33,33 +33,36 @@ No dedicated Security team required
 ##How does it work?
 
 ###1. Install agents on EC2 instances
-This Inspector agent collects all the data from ec2 instances to the Inspector. Agent can be installed as in;
-Download "`wget https://s3-us-west-2.amazonaws.com/inspector.agent.us-west-2/latest/install" and "sudo bash install`". 
-Can start / stop the agent by "`sudo /etc/init.d/inspector start/stop`"
 
-###2. Tag 
-	Tag the instances with application specific information; a clooection of AWS resources that counts for your application.
+This Inspector agent collects all the data from ec2 instances to the Inspector. Agent can be installed by downloading from 
+"`wget https://s3-us-west2.amazonaws.com/inspector.agent.us-west-2/latest/install" and "sudo bash install`". 
+
+Can start / stop the agent by 
+	"`sudo /etc/init.d/inspector start/stop`"
+
+By default Amazon Linux ships with agents installed.
+
+###2. Tag
+Tag the instances with application specific information; a collection of AWS resources that counts for your application.
 
 ###3. Configure Amazon Inspector
-	Create an assessment, give it a logical name
-	Add Set-of-Rules required for assessment 
-	Define the deuration of the assessment
+- Create an assessment, give it a logical name
+- Add Set-of-Rules required for assessment 
+- Define the duration of the assessment
 
-![Assessment overview][9]
 
+> ![Assessment overview][9]
 Image Source: AWS Website
 
 ###4. Start the assessment
 ###5. Exercise the application
-	Manually testing the application, automation etc
+Manually testing the application, automation etc
 
-As, the application being exercised, an Inspector agents running on each instances collects file system, process and network activities. Agents also collects the information about other AWS services used by the application like s3 endpoints, network traffic between ensctances. All these informations from agents provides Inspector a complete understanding of the application. 
-All the collected data is analyzed and compared against the set of built-in security rules selected in Step:3
+	As, the application being exercised, an Inspector agents running on each instances collects file system, process and network activities. Agents also collects the information about other AWS services used by the application like s3 endpoints, network traffic between ensctances. All these informations from agents provides Inspector a complete understanding of the application. 
+All the collected data is analyzed and compared against the set of built-in security rules selected in **Step:3**
 
 ###6: The Report
-	After the assessment, Inspector genrates a detailed report of any vulnerability or complaince issue and priortize steps for remideations. 
-
-
+After the assessment, Inspector generates a detailed report of any vulnerability or compliance issue and prioritize steps for remideations. 
 
 The preview launch of the Inspector will have the following set of rules:
 
@@ -76,7 +79,8 @@ I will revisit this section again to dive deeper into configuration, usecase, ad
 
 Please leave your comments below if you have any doubts or questions.
 
-#####Need DevOps help? - Get in touch with [The Remote Lab][1] 
+
+#####**Need DevOps help? - Get in touch with** [The Remote Lab][1] 
 [LinkedIn][2] [Facebook][3] [Github][4] [Twitter][5]
 
 Credits: [Amazon Inspector][6], [Amazon Blog][12], [AWS re:Invent][13]
