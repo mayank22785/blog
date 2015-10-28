@@ -74,6 +74,13 @@ Ge your hands dirty by [Signup][10] for the Inspector preview
 
 I will revisit this section again to dive deeper into configuration, usecase, advantages once Amazon Inspector is full blown service in AWS offerings.
 
+Please leave your comments below if you have any doubts or questions.
+
+#####Need DevOps help? - Get in touch with [The Remote Lab][1] 
+[LinkedIn][2] [Facebook][3] [Github][4] [Twitter][5]
+
+Credits: [Amazon Inspector][6], [Amazon Blog][12], [AWS re:Invent][13]
+
 
   [1]: http://theremotelab.io
   [2]: https://www.linkedin.com/company/the-remote-lab
@@ -86,3 +93,5 @@ I will revisit this section again to dive deeper into configuration, usecase, ad
   [9]: https://s3-ap-southeast-1.amazonaws.com/trl-blog/insp_How_3.png
   [10]: http://aws.amazon.com/inspector/preview/
   [11]: https://s3-ap-southeast-1.amazonaws.com/trl-blog/amazon_inspector.png
+  [12]: https://aws.amazon.com/blogs/aws/
+  [13]: https://reinvent.awsevents.com/
