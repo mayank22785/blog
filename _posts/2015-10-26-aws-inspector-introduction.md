@@ -55,6 +55,8 @@ Tag the instances with application specific information; a collection of AWS res
 Image Source: AWS Website
 
 ###4. Start the assessment
+Click on **Start** button
+
 ###5. Exercise the application
 Manually testing the application, automation etc
 
@@ -73,7 +75,7 @@ The preview launch of the Inspector will have the following set of rules:
 - Application Security Best Practices
 - PCI DSS 3.0 Assessment
 
-Ge your hands dirty by [Signup][10] for the Inspector preview  
+Get your hands dirty by [Sign up][10] for the Inspector preview  
 
 I will revisit this section again to dive deeper into configuration, use-case, advantages once Amazon Inspector is full blown service in AWS offerings.
 
