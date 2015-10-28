@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "OpenStack a Conglomerate"
-date: 2015-10-15
+date: 2015-10-28
 author: Thyagaraju
 tags: OpenStack, Cloud, Public Cloud, Private Cloud
 category: Use Cases
