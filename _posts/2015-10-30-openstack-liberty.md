@@ -32,14 +32,6 @@ PS: Next release will be called as `Mitaka`. It’s named after the town located
 
 `OpenStack Liberty` is the 12th release of `OpenStack` and was released on October 15 2015. 
 
-For the sake of numbers, the journey from `Kilo` to `Liberty` included 25,268 commits and as per `OpenStack Foundation` report, top code committers for the `Liberty` release were HP, Red Hat, Mirantis, IBM, Rackspace, Huawei, Intel, Cisco, VMware, and NEC.`
-
-Major Focus of `Liberty` is towards `Enhanced Manageability`, `Simplified Scalability`, and `Extensibility`.
-
-Below is what `Jonathan Bryce`, the executive director of the OpenStack Foundation says about `Liberty.`
-
-"`Liberty` is a milestone release because it underscores the ability of a global, diverse community to agree on technical decisions, amend project governance in response to maturing software and the voice of the marketplace, then build and ship software that gives users and operators what they need."
-
 Lets have a closer look at the major focus areas of `Liberty` before we dwell into individual projects
 
 ## Enhanced Manageability
