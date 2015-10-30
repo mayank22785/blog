@@ -10,7 +10,6 @@ excerpt: "Lets discuss about OpenStack Liberty"
 
 ## Understanding OpenStack Release Naming Conventions
 
-OpenStack releases are numbered using a YYYY.N time-based scheme. For example, the first release of 2012 will have the 2012.1 version number. During the development cycle, the release is identified using a codename. Those codenames are ordered alphabetically: Austin was the first release, Bexar is the second, Cactus the third, etc.
 
 `Liberty` is the 12th major release of OpenStack and below are the list of all the releases so far.
 
