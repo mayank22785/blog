@@ -8,7 +8,7 @@ category: Information
 excerpt: "Lets discuss about OpenStack Liberty"
 ---
 
-## Understanding OpenStack Release Naming Conventions
+## OpenStack Release Names
 
 
 `Liberty` is the 12th major release of OpenStack and below are the list of all the releases so far.
