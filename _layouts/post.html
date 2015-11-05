@@ -10,6 +10,9 @@ layout: default
 			<article>
 				{{ content }}
 			</article>
+
+            {% include disqus.html disqus_identifier=page.disqus_identifier %}
+
 			<aside class="author">
 				<h2>Posted {{ page.date | date: "%b %-d, %Y" }} by...</h2>
 				<div class="lefty cf">
@@ -32,4 +35,5 @@ layout: default
 			</aside>
 		</div>	
 	</section>
+
 </div>

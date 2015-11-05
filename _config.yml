@@ -24,6 +24,7 @@ defaults:
       type: posts   # limit to posts
     values:
       is_post: true 
+      comments: true
 
 gems:
   - jemoji
