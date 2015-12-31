@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "OpenStack Liberty"
+title: "An overview of OpenStack Liberty"
 date: 2015-12-30
 author: Thyagaraju
 tags: OpenStack, Cloud, Public Cloud, Private Cloud
