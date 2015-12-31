@@ -1,12 +1,15 @@
 ---
 layout: post
 title: "OpenStack Liberty"
-date: 2015-10-30
+date: 2015-12-30
 author: Thyagaraju
 tags: OpenStack, Cloud, Public Cloud, Private Cloud
 category: Information
 excerpt: "Lets discuss about OpenStack Liberty"
 ---
+
+![openstack-liberty](https://cloud.githubusercontent.com/assets/8342133/12033099/68e58a38-ae45-11e5-98da-b4e990c32815.png)
+
 
 ## OpenStack Release Names
 
