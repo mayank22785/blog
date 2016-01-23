@@ -12,7 +12,7 @@ If you are looking to transform your complex infrastructure into code, [chef][6]
 
 ## What is 'Chef' ?
 
-Chef is an automation provisioning tool. It is a cloud infrastructure automation framework that makes it easy 
+Chef is an automation provisioning tool. It is a cloud infrastructure automation framework that makes it easy
 to deploy servers and applications to any physical, virtual, or cloud location, no matter the size of the infrastructure.
 
 ## 'Architecture':
@@ -30,8 +30,8 @@ It is the fundamental unit of configuration and policy distribution. A cookbook 
 
 ## Recipe:
 
-It is the most fundamental configuration element within the organization. A recipe is authored using Ruby, which is a programming language designed to read and behave in a predictable manner. It is mostly a collection of resources, defined using patterns (resource names, attribute-value pairs, and actions) 
-helper code is added around this using Ruby, when needed it must define everything that is 
+It is the most fundamental configuration element within the organization. A recipe is authored using Ruby, which is a programming language designed to read and behave in a predictable manner. It is mostly a collection of resources, defined using patterns (resource names, attribute-value pairs, and actions)
+helper code is added around this using Ruby, when needed it must define everything that is
 required to configure part of a system. It must be:
 
 - Must be stored in a cookbook​
@@ -71,7 +71,7 @@ The chef-client then does as much of the configuration work as possible on the n
 
 ## Chef-Client:
 
-It is a provisioning which works on server.​It is an agent that runs locally on every node that is under management by Chef. 
+It is a provisioning which works on server.​It is an agent that runs locally on every node that is under management by Chef.
 When a chef-client is run, it will perform all of the steps that are required to bring the node into the expected state, including:​
 
 - Registering and authenticating the node with the Chef server​
@@ -86,41 +86,41 @@ When a chef-client is run, it will perform all of the steps that are required to
 ![foodcritic][10]
 
 It tries to identify possible issues with the logic and style of your cookbooks.
-It comes with rules concerning various areas: style, correctness, attributes, strings, 
+It comes with rules concerning various areas: style, correctness, attributes, strings,
 portability, search,services, files, metadata, and so on.
 
 ## RSpec Framework:
 
-It is composed of multiple libraries, which are designed to work together, or 
+It is composed of multiple libraries, which are designed to work together, or
 can be used independently with other testing tools like Cucumber or Minitest.
 The parts of RSpec are:​
 
-- *rspec-core:* 
-The spec runner, providing a rich command line program, flexible and customizable reporting, 
+- *rspec-core:*
+The spec runner, providing a rich command line program, flexible and customizable reporting,
 and an API to organize your code examples.
 
 - *rspec-expectations:*
 Provides a readable API to express expected outcomes of a code example.  ​
 
 - *rspec-mocks:*
-Test double framework, providing multiple types of fake objects to allow you 
+Test double framework, providing multiple types of fake objects to allow you
 to tightly control the environment in which your specs run.   
 
-- *rspec-rails:* 
+- *rspec-rails:*
 Supports using RSpec to test Ruby on Rails applications in place of Rails' built-in test framework.
 
 ## Chef Test Kitchen:
 
 It is a test harness tool to execute your configured code on one or more platforms in isolation.
-A driver plugin architecture is used which lets you run your code on various cloud providers and virtualization 
+A driver plugin architecture is used which lets you run your code on various cloud providers and virtualization
 technologies such as Amazon EC2, Blue Box, CloudStack, Digital Ocean,Rackspace, OpenStack, Vagrant, Docker, LXC containers, and more.
 Many testing frameworks are already supported out of the box including Bats, shUnit2, RSpec, Serverspec, with others being created weekly.​
 
 ## Chef DSL(Domain Specific Language):
 
 Recipe DSL helps ensure that recipes interact with nodes (and node properties) in the desired manner.
-Ruby is a dynamic, open source programming language with a focus on simplicity and productivity. 
-It has an elegant syntax that is natural to read and easy to write. 
+Ruby is a dynamic, open source programming language with a focus on simplicity and productivity.
+It has an elegant syntax that is natural to read and easy to write.
 
 ## Chef Analytics:
 
@@ -133,16 +133,19 @@ where reports about chef-client run outcomes may be viewed, where rules are proc
 ![lncf_1301][11]
 
 A data bag is a global variable that is stored as JSON data and is accessible from a Chef server.
-A data bag is indexed for searching and can be loaded by a recipe or accessed during a search. 
+A data bag is indexed for searching and can be loaded by a recipe or accessed during a search.
 It can be created in two ways: using knife or manually.
 
 My Slides on slide share can be found [here][12].
 
 **Hope this helps! Keep forking.**
 
+## The Remote Lab DevOps Offerings:
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/h9h9GNjX5Gncpi" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/bhalothia/the-remote-lab-devops-offerings" title="The Remote Lab DevOps Offerings" target="_blank">The Remote Lab DevOps Offerings</a> </strong> from <strong><a href="//www.slideshare.net/bhalothia" target="_blank">Virendra Bhalothia</a></strong> </div>
+
 Please leave your comments below if you have any doubts or questions.
 
-#####Need DevOps help? - Get in touch with [The Remote Lab][1] 
+#####Need DevOps help? - Get in touch with [The Remote Lab][1]
 [LinkedIn][2] [Facebook][3] [Github][4] [Twitter][5]
 
 

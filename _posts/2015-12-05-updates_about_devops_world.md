@@ -139,7 +139,10 @@ Here, we are summing it up in this blog post so that you have a single place to 
 - [Sublime-Text][100] - Sublime Text is a cross-platform source code editor with a Python application programming interface (API). It natively supports many programming languages and markup languages, and its functionality can be extended by users with plugins, typically community-built.
 
 
-**Please leave your comments below if you have any doubts or questions.**
+## The Remote Lab DevOps Offerings:
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/h9h9GNjX5Gncpi" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/bhalothia/the-remote-lab-devops-offerings" title="The Remote Lab DevOps Offerings" target="_blank">The Remote Lab DevOps Offerings</a> </strong> from <strong><a href="//www.slideshare.net/bhalothia" target="_blank">Virendra Bhalothia</a></strong> </div>
+
+Please leave your comments below if you have any doubts or questions.
 
 #####Need DevOps help? - Get in touch with [The Remote Lab][101]
 [LinkedIn][102] [Facebook][103] [Github][104] [Twitter][105]

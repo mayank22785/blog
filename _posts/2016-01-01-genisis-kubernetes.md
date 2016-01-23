@@ -8,31 +8,31 @@ category: orchestration docker google etcd coreos
 excerpt: "A brief study on Kubernetes and its components"
 ---
 
-Although Docker has made quite a reputation, 
+Although Docker has made quite a reputation,
 in introducing containers as a proper solution for big and small companies in today's competitive scenario, there are many companies
 that mastered the art of running scalable, production workloads in containers.Google,which is one of those popular names,
-deals with more than two billion containers per week have been dealing and using containers for over a decade and has introduced 
+deals with more than two billion containers per week have been dealing and using containers for over a decade and has introduced
 one of its brilliant products [Kubernetes][6]
 
 ## What is Kubernetes ?
 
 [Kubernetes][6] is an open source orchestration system for Docker containers.
-It handles scheduling onto nodes in a compute cluster and actively manages workloads to ensure that 
-their state matches the users declared intentions. Using the concepts of "labels" and "pods", 
+It handles scheduling onto nodes in a compute cluster and actively manages workloads to ensure that
+their state matches the users declared intentions. Using the concepts of "labels" and "pods",
 it groups the containers which make up an application into logical units for easy management and discovery.
 
 
-##  Basic Terminologies about Kubernetes : 
+##  Basic Terminologies about Kubernetes :
 
-- *Pods*: 
+- *Pods*:
   The smallest deployable units that can be created, scheduled, and managed. Its a logical collection of containers that belong to an application.
 
-- *Master*: 
-  The central control point that provides a unified view of the cluster. There is a single master node that 
+- *Master*:
+  The central control point that provides a unified view of the cluster. There is a single master node that
   control multiple minions.
-  
-- *Minion*: 
-  The worker node that run tasks as delegated by the master. Minions can run one or more pods. 
+
+- *Minion*:
+  The worker node that run tasks as delegated by the master. Minions can run one or more pods.
   It provides an application-specific “virtual host” in a containerized environment.
 
 - *Selector*:
@@ -53,17 +53,17 @@ it groups the containers which make up an application into logical units for eas
 
 It is the primary "node agent" that runs on each node.
 The kubelet works in terms of a PodSpec.(PodSpec is a YAML or JSON object that describes a pod​).
-It takes a set of PodSpecs that are provided through various mechanisms and ensures that the containers described 
-in those PodSpecs are running and healthy.Other than from an PodSpec from the apiserver, there are three ways that 
-a container manifest can be provided to the Kubelet : 
+It takes a set of PodSpecs that are provided through various mechanisms and ensures that the containers described
+in those PodSpecs are running and healthy.Other than from an PodSpec from the apiserver, there are three ways that
+a container manifest can be provided to the Kubelet :
 
-- *File*: 
+- *File*:
   Path passed as a flag on the command line. This file is rechecked every 20 seconds (configurable with a flag).​
 
-- *HTTP endpoint*: 
+- *HTTP endpoint*:
   HTTP endpoint passed as a parameter on the command line. This endpoint is checked every 20 seconds​-
 
-- *HTTP server*: 
+- *HTTP server*:
   The kubelet can also listen for HTTP and respond to a simple API (underspecd currently) to submit a new manifest.​
 
 ## Kubernetes Cluster:
@@ -80,11 +80,11 @@ It is by default built in for kubernetes.​All cluster data is stored here in e
 
 ## Services:
 
-It is abstraction which defines a logical set of Pods and a policy by which to access them - 
+It is abstraction which defines a logical set of Pods and a policy by which to access them -
 sometimes called as micro-service.Each service is given its own IP address and port which remains
-constant for the lifetime of the service. So to access the service from inside your application or 
-container you just nedd to bind to the IP address and port number for the service.A service, through its 
-label selector, can resolve two or more pods. Over the life of a service, the set of pods which 
+constant for the lifetime of the service. So to access the service from inside your application or
+container you just nedd to bind to the IP address and port number for the service.A service, through its
+label selector, can resolve two or more pods. Over the life of a service, the set of pods which
 comprise that service can grow, shrink, or turn over completely.
 
 
@@ -93,8 +93,8 @@ comprise that service can grow, shrink, or turn over completely.
 ## NameSpaces:
 
 It enable you to manage different environments within the same cluster.
-It is the abstraction which defines a logical set of Pods and a policy by which to access them - 
-sometimes called a micro-service.You can also run different types of server, batch, or other 
+It is the abstraction which defines a logical set of Pods and a policy by which to access them -
+sometimes called a micro-service.You can also run different types of server, batch, or other
 jobs in the same cluster without worrying about them affecting each other.
 
 ![lxc_architecture][11]
@@ -111,8 +111,8 @@ The simplest backend of flannel is udp which uses a TUN device to encapsulate ev
 
 It ensures that a specified number of pod "replicas" are running at any one time.
 If there are too many, the replication controller kills some pods. If there are too few,
-it starts more pods.The pod Template creates new pods from a template.The labels work is to remove 
-the pod from a replication controller's target set,to change the pod's label.Also,deleting a replication 
+it starts more pods.The pod Template creates new pods from a template.The labels work is to remove
+the pod from a replication controller's target set,to change the pod's label.Also,deleting a replication
 controller does not affect the pods it created.
 
 ## Replication Controller Architecure:
@@ -122,29 +122,29 @@ controller does not affect the pods it created.
 
 ## Volumes:
 
-The Volume is just a directory, possibly with some data in it, which is accessible to the containers in a pod. 
-It cannot mount onto other volumes or have hard links to other volumes.Each container in the Pod 
-must independently specify where to mount each volume.Kubernetes also supports several types of Volumes,such as : 
+The Volume is just a directory, possibly with some data in it, which is accessible to the containers in a pod.
+It cannot mount onto other volumes or have hard links to other volumes.Each container in the Pod
+must independently specify where to mount each volume.Kubernetes also supports several types of Volumes,such as :
 Empty Dir,host Path,gce Persistent Disk,aws Elastic Block Store,nfs,iscsi,glusterfs,rbd,gitRepo,
 secret,persistent Volume Claim etc.
 
 
-It is composed of multiple libraries, which are designed to work together, or 
+It is composed of multiple libraries, which are designed to work together, or
 can be used independently with other testing tools like Cucumber or Minitest.
 The parts of RSpec are:​
 
-- *rspec-core:* 
-The spec runner, providing a rich command line program, flexible and customizable reporting, 
+- *rspec-core:*
+The spec runner, providing a rich command line program, flexible and customizable reporting,
 and an API to organize your code examples.
 
 - *rspec-expectations:*
 Provides a readable API to express expected outcomes of a code example.  ​
 
 - *rspec-mocks:*
-Test double framework, providing multiple types of fake objects to allow you 
+Test double framework, providing multiple types of fake objects to allow you
 to tightly control the environment in which your specs run.   
 
-- *rspec-rails:* 
+- *rspec-rails:*
 Supports using RSpec to test Ruby on Rails applications in place of Rails' built-in test framework.
 
 ![kube-gluster][14]
@@ -165,8 +165,8 @@ The monitoring architecture of [kubernetes][6] look like:
 
 ## Labels and Selectors:
 
-Labels are the key/value pairs that are attached to objects, such as pods. 
-Labels are intended to be used to specify identifying attributes of objects that are meaningful and 
+Labels are the key/value pairs that are attached to objects, such as pods.
+Labels are intended to be used to specify identifying attributes of objects that are meaningful and
 relevant to users.Using label selector, the client/user can identify a set of objects. The label selector
 is the core grouping primitive in Kubernetes.
 
@@ -176,9 +176,12 @@ For more reference on this topic,my slides can be found at [slideshare][18].
 
 **Hope this helps! Keep forking.**
 
+## The Remote Lab DevOps Offerings:
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/h9h9GNjX5Gncpi" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/bhalothia/the-remote-lab-devops-offerings" title="The Remote Lab DevOps Offerings" target="_blank">The Remote Lab DevOps Offerings</a> </strong> from <strong><a href="//www.slideshare.net/bhalothia" target="_blank">Virendra Bhalothia</a></strong> </div>
+
 Please leave your comments below if you have any doubts or questions.
 
-#####Need DevOps help? - Get in touch with [The Remote Lab][1] 
+#####Need DevOps help? - Get in touch with [The Remote Lab][1]
 [LinkedIn][2] [Facebook][3] [Github][4] [Twitter][5]
 
 

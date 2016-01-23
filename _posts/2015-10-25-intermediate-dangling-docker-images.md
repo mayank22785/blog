@@ -8,11 +8,11 @@ category: tutorial
 excerpt: "In-depth tutorial about Docker Image File Systems. Don't be afraid of Docker &lt;none&gt;:&lt;none&gt; images. Not all that is black is charcoal."
 ---
 
-### Hello world! 
+### Hello world!
 
-So, we figured out how to build `Docker` images using `Dockerfile` in the [last article][6]. I hope everyone now knows how to build a `Docker` image from scratch. 
+So, we figured out how to build `Docker` images using `Dockerfile` in the [last article][6]. I hope everyone now knows how to build a `Docker` image from scratch.
 
-Before we start this article, let's get familiar with `Docker` image filesystem. How many of you know about the `Docker` image filesystem? 
+Before we start this article, let's get familiar with `Docker` image filesystem. How many of you know about the `Docker` image filesystem?
 
 `Docker` images are read-only templates, which could contain an operating system and an application on top of it. It is then used for creating `Docker` containers.
 
@@ -31,11 +31,11 @@ Let's do some more digging to understand it practically. I'm using [Docker-Machi
 
 ![default_env][10]
 
-...and I've removed everything so it should not show me any containers, images or intermediate images. 
+...and I've removed everything so it should not show me any containers, images or intermediate images.
 
 ![nothing_is_running][11]
 
-You can see that, my docker host is clean and no signs of an image or a container. 
+You can see that, my docker host is clean and no signs of an image or a container.
 
 
 **Did you ever think where are Docker images stored?**
@@ -51,7 +51,7 @@ Right, now nothing is present as we have not pulled or build any images. Let me 
 ![docker-pull-rundeck][14]
 
 
-Alright, now the RunDeck image is downloaded and we are good to create containers out of it. We can check what all is updated inside `/var/lib/docker` folder on the `Docker-Machine`. 
+Alright, now the RunDeck image is downloaded and we are good to create containers out of it. We can check what all is updated inside `/var/lib/docker` folder on the `Docker-Machine`.
 
 Before that, let's do `docker images` and `docker images -a`:
 
@@ -60,7 +60,7 @@ Before that, let's do `docker images` and `docker images -a`:
 
 Now, at this point of time you might be wondering what is the difference between `docker images` and `docker images -a`?
 
-`Docker` file system layers are by default stored at `/var/lib/docker/graph`, which is called as the graph database. And these layers corresponds to the `IMAGE ID` 
+`Docker` file system layers are by default stored at `/var/lib/docker/graph`, which is called as the graph database. And these layers corresponds to the `IMAGE ID`
 
 ![docker-graph][16]
 
@@ -79,9 +79,9 @@ To verify this, you can run this command: `cd /var/lib/docker/graph && more laye
 
 Hey, you need to know about the evil `<none>:<none>` images as well.. those which aren't intermediate and which shows up when you do `docker images`.
 
-Docker keeps all of the images in its cache that you have used in the disk, even if those are not actively running. 
+Docker keeps all of the images in its cache that you have used in the disk, even if those are not actively running.
 
-Check all [open issues][18] on `Docker` repository. 
+Check all [open issues][18] on `Docker` repository.
 
 
 Here's how you can clean up dangling images:
@@ -94,11 +94,13 @@ It will give you an error if there's no dangling image present. If you don't wan
 
 This command will do the manual garbage collection.
 
+## The Remote Lab DevOps Offerings:
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/h9h9GNjX5Gncpi" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/bhalothia/the-remote-lab-devops-offerings" title="The Remote Lab DevOps Offerings" target="_blank">The Remote Lab DevOps Offerings</a> </strong> from <strong><a href="//www.slideshare.net/bhalothia" target="_blank">Virendra Bhalothia</a></strong> </div>
 
-#### Hope it helps!
+Please leave your comments below if you have any doubts or questions.
 
 
-#####Need DevOps help? - Get in touch with [The Remote Lab][1] 
+#####Need DevOps help? - Get in touch with [The Remote Lab][1]
 [LinkedIn][2] [Facebook][3] [Github][4] [Twitter][5]
 
 
@@ -120,4 +122,3 @@ This command will do the manual garbage collection.
   [16]: https://s3-ap-southeast-1.amazonaws.com/trl-blog/docker_intermediate_6.png
   [17]: https://s3-ap-southeast-1.amazonaws.com/trl-blog/docker_intermediate_7.png
   [18]: https://github.com/docker/docker/issues?utf8=%E2%9C%93&q=is%3Aissue+is%3Aopen+dangling
-

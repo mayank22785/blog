@@ -32,17 +32,17 @@ You can find the complete `Dockerfile` instruction reference [here][7] or [here]
 
 We will use `Dockerfile` approach in this tutorial and dockerize [RunDeck][6] in this tutorial, all because of my love for this tool.  
 
-We will demonstrate the best practices and methods to make most of `docker` and containers via `Dockerfiles`. We will use a [base image][8] and build the RunDeck image step by step. 
+We will demonstrate the best practices and methods to make most of `docker` and containers via `Dockerfiles`. We will use a [base image][8] and build the RunDeck image step by step.
 
 
-## Docker: What the fuss is all about? 
+## Docker: What the fuss is all about?
 
 `Docker` is an open source project for creating lightweight, portable, self-sufficient application containers. `Docker` containers wrap up a piece of software in a complete filesystem that contains everything it needs to run: code, runtime, system tools, system libraries – anything you can install on a server. This guarantees that it will always run the same, regardless of the environment it is running in.
 
 For deep diving into `docker` and it's components, please refere to [this article][10].
 
 
-## Dockerfile Syntax and Commands 
+## Dockerfile Syntax and Commands
 
 These are some commands which `dockerfile` can contain to have `docker` build an image.
 
@@ -61,9 +61,9 @@ These are some commands which `dockerfile` can contain to have `docker` build an
 - EXPOSE - `Syntax`: `EXPOSE [port]`
 - FROM - `Syntax`: `FROM [image name]`
 - RUN - `Syntax`: `RUN [command]`
-- MAINTAINER - `Syntax`: `MAINTAINER [name]` 
+- MAINTAINER - `Syntax`: `MAINTAINER [name]`
 - USER - `Syntax`: `USER [UID]`
-- VOLUME - `Syntax`: `VOLUME ["/dir_1", "/dir_2" ..]` 
+- VOLUME - `Syntax`: `VOLUME ["/dir_1", "/dir_2" ..]`
 - WORKDIR - `Syntax`: `WORKDIR /path`
 - PUBLISH - `To expose ports to the host, at runtime, use the -p flag or the -P flag.`
 
@@ -80,7 +80,7 @@ These are some commands which `dockerfile` can contain to have `docker` build an
 
 > Setting the base image to use
 
-`FROM debian:wheezy` 
+`FROM debian:wheezy`
 
 > Defining the maintainer of this project
 
@@ -102,7 +102,7 @@ RUN apt-get -qq update && apt-get -qqy upgrade && apt-get -qqy install --no-inst
 > Copying or downloading data inside the container
 
 ```
-# Downloading RunDeck package 
+# Downloading RunDeck package
 ADD http://dl.bintray.com/rundeck/rundeck-deb/rundeck-2.5.3-1-GA.deb /tmp/rundeck.deb
 # Copying the prequisities content
 ADD prerequisites/ /
@@ -178,13 +178,18 @@ DEBIAN_SYS_MAINT_PASSWORD
 /var/lib/mysql
 /var/log/rundeck
 ```
+
 Here's the [README][14] for the source repo of this `docker` image.
+
 
 **Hope this helps! Keep forking.**
 
+## The Remote Lab DevOps Offerings:
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/h9h9GNjX5Gncpi" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/bhalothia/the-remote-lab-devops-offerings" title="The Remote Lab DevOps Offerings" target="_blank">The Remote Lab DevOps Offerings</a> </strong> from <strong><a href="//www.slideshare.net/bhalothia" target="_blank">Virendra Bhalothia</a></strong> </div>
+
 Please leave your comments below if you have any doubts or questions.
 
-#####Need DevOps help? - Get in touch with [The Remote Lab][1] 
+#####Need DevOps help? - Get in touch with [The Remote Lab][1]
 [LinkedIn][2] [Facebook][3] [Github][4] [Twitter][5]
 
 

@@ -17,14 +17,14 @@ I would not get into the history and installation/configuration of Jenkins, as i
 
 To start with, let me tell you guys as to how I look at `Jenkins`.
 
-For me, `Jenkins` is an extremely powerful, extremely capable but a `dumb tool`. I call this as a `dumb tool` only because, as of now `Jenkins` is an absolute executor but it cannot make any logical decisions. 
+For me, `Jenkins` is an extremely powerful, extremely capable but a `dumb tool`. I call this as a `dumb tool` only because, as of now `Jenkins` is an absolute executor but it cannot make any logical decisions.
 
 Just because `Jenkins` does not make decisions, lets not undermine `Jenkins` in any way, because as I said earlier, its an absolute executor and it can do anything and everything to perfection and its just that, we need to know how we can use `Jenkins` and how best we can utilize it's potential and that is what I would like to touch upon in the below sections.
 
 ## Use Cases of `Jenkins`
 
 - Continous Integration and Continous Delivery and Deployment - CI/CD
-- Scheduler 
+- Scheduler
 - `SPOT` (Single Point of Trigger) for `BAD` (Build, Automate Infrastructure and Deployment)
 
 
@@ -42,16 +42,16 @@ Continuous Integration is a process in which all development work is integrated 
 
 `Jenkins` can be extended by additional plug-ins, e.g. for building and testing Android applications or to support the Git version control system or any other activities can be performed using the [right plugins][6]
 
-`Jenkins` stores all the settings, logs and build artifacts in its home directory, for example, in `/var/lib/jenkins` under the default install location of Ubuntu. 
+`Jenkins` stores all the settings, logs and build artifacts in its home directory, for example, in `/var/lib/jenkins` under the default install location of Ubuntu.
 
 The jobs directory contains the individual jobs configured in the Jenkins install. We can move a job from one Jenkins installation to another by copying the corresponding job directory. We can also copy a job directory to clone a job or rename the directory.
 
 
 ## `Jenkins` as Scheduler
 
-We all know how a Cron works. A Cron is nothing but a Scheduler, just a Scheduler which schedules the process and and those processes can be absolutely anything. Cron runs things at fixed times, repeat them etc. 
+We all know how a Cron works. A Cron is nothing but a Scheduler, just a Scheduler which schedules the process and and those processes can be absolutely anything. Cron runs things at fixed times, repeat them etc.
 
-In the same lines, if implemented properly, `Jenkins` can be your best alternate for `Cron`. 
+In the same lines, if implemented properly, `Jenkins` can be your best alternate for `Cron`.
 
 `Jenkins` has something called as `periodic builds` which accepts the time frame in a fashion very much similar to cron and this in combination with `Execute Shell` feature  can beat Cron anytime, provided, we use it in the Right Way.
 
@@ -66,7 +66,7 @@ Even if we want to migrate from `Cron` to `Jenkins`, it can be done effortlessly
 
 ## `Jenkins` as `SPOT` for `BAD`
 
-`Jenkins` as a single point of trigger for `Build`, `Automate Infrastructure` and `Deployment` is more of a process that can be implemented and is not a ready to use feature of `Jenkins`. When we are using Jenkins as `SPOT` for `BAD`, we are effectively giving instructions to Jenkins as to what needs to be done and in what way and we also need to pass the required parameters. 
+`Jenkins` as a single point of trigger for `Build`, `Automate Infrastructure` and `Deployment` is more of a process that can be implemented and is not a ready to use feature of `Jenkins`. When we are using Jenkins as `SPOT` for `BAD`, we are effectively giving instructions to Jenkins as to what needs to be done and in what way and we also need to pass the required parameters.
 
 *Build:*
 
@@ -74,7 +74,7 @@ How a code gets built, varies per project.
 
 Jenkins can be used to make different types of builds, such as continuous, official, periodic, nightly and others. Builds can be triggered manually by initializing the build through Jobs or through scheduled or periodic jobs or even through email.
 
-Jenkins can accept the code from various `Source Control` systems, such as `Git` or `SVN` or any other `Source Control` and all it needs is the right kind of plugins to support it. Once it gets the Code, it compiles, based on the result, if it passes, it builds an artifact and stores the artifact in a location defined by you and if the build process fails, it triggers the notifications to the distribution list, again pre configured by you. 
+Jenkins can accept the code from various `Source Control` systems, such as `Git` or `SVN` or any other `Source Control` and all it needs is the right kind of plugins to support it. Once it gets the Code, it compiles, based on the result, if it passes, it builds an artifact and stores the artifact in a location defined by you and if the build process fails, it triggers the notifications to the distribution list, again pre configured by you.
 
 I would not like to get into the details of build steps as that is not what I would like cover in this article and would rather prefer to the Use Cases of Jenkins and yeah, `Build` is one Really Important Use case.
 
@@ -96,7 +96,7 @@ The above scenario would suit any kind of Infrastructure and is best suited for 
 
 Deployment through Jenkins is a Straight forward process and guess there is no need to go into too much of details.
 
-However, if we follow the above logic, then, depolyments would be even much easier, because, as parameters, all we need to probably pass is the `Build Name` and the `Chef Environment Name` and the `Account` name and again through the scripts in the backend and the paramters passed, Jenkins can be configured to do a auto discovery to connect to the nodes and deploy the artifacts on them. 
+However, if we follow the above logic, then, depolyments would be even much easier, because, as parameters, all we need to probably pass is the `Build Name` and the `Chef Environment Name` and the `Account` name and again through the scripts in the backend and the paramters passed, Jenkins can be configured to do a auto discovery to connect to the nodes and deploy the artifacts on them.
 
 This deployment job can also have some `Post Job` actions to take care of any post deployment activities and may also include the required test cases to do `Sanity`.
 
@@ -106,9 +106,13 @@ This deployment job can also have some `Post Job` actions to take care of any po
 
 **Hope this helps! Keep forking.**
 
+## The Remote Lab DevOps Offerings:
+
+<iframe src="//www.slideshare.net/slideshow/embed_code/key/h9h9GNjX5Gncpi" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/bhalothia/the-remote-lab-devops-offerings" title="The Remote Lab DevOps Offerings" target="_blank">The Remote Lab DevOps Offerings</a> </strong> from <strong><a href="//www.slideshare.net/bhalothia" target="_blank">Virendra Bhalothia</a></strong> </div>
+
 Please leave your comments below if you have any doubts or questions.
 
-#####Need DevOps help? - Get in touch with [The Remote Lab][1] 
+#####Need DevOps help? - Get in touch with [The Remote Lab][1]
 [LinkedIn][2] [Facebook][3] [Github][4] [Twitter][5]
 
 

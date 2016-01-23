@@ -8,7 +8,7 @@ category: Use Cases
 excerpt: "Lets discuss about the various components of OpenStack"
 ---
 
-Before we begin, lets take a few minutes to know what is [OpenStack][6]. 
+Before we begin, lets take a few minutes to know what is [OpenStack][6].
 
 `OpenStack` is a set of software tools for building and managing cloud computing platforms for public and private clouds. Backed by some of the biggest companies in software development and hosting, as well as thousands of individual community members, many think that `OpenStack` is the future of `Cloud Computing`.
 
@@ -39,7 +39,7 @@ Some of the Various `Projects` of OpenStack and their `Code Names` are below:
 - Orchestration Service --> Heat
 - Load Balancing        --> LBAAS
 
-Now lets look at these `Projects` in detail and understand the role these individual projects play in `OpenStack Conglomerate` 
+Now lets look at these `Projects` in detail and understand the role these individual projects play in `OpenStack Conglomerate`
 
 ## Horizon
 
@@ -58,7 +58,7 @@ It is a Django-based project aimed at providing a complete OpenStack Dashboard a
 
 It is a Pluggable, Scalable and API-driven system for managing networks and IP addresses. Neutron is an SDN (Software-defined Network) component and can be configured for network topologies, such as per-tenant private networks and others.
 
-The core `Neutron` API includes support for Layer 2 networking and IP address management (IPAM) and also an extension for a Layer 3 router construct that enables routing between Layer 2 networks and gateways to external networks. 
+The core `Neutron` API includes support for Layer 2 networking and IP address management (IPAM) and also an extension for a Layer 3 router construct that enables routing between Layer 2 networks and gateways to external networks.
 
 `Neutron` includes a growing list of plugins that enable interoperability with various commercial and open source network technologies, including routers, switches, virtual switches and software-defined networking (SDN) controllers.
 
@@ -100,7 +100,7 @@ On a high level, a `Swift` architecture can be depicted as below:
 
 ## Cinder
 
-`Cinder` was originally part of the `Nova` Project and was called as `Nova Volume`. Later on, it came out of `Nova` and was renamed as `Cinder` which is now a standalone project. 
+`Cinder` was originally part of the `Nova` Project and was called as `Nova Volume`. Later on, it came out of `Nova` and was renamed as `Cinder` which is now a standalone project.
 
 `Cinder` is the the OpenStack Block Storage Service, which provides persistent block storage to guest virtual machines for expanded storage, better performance and integration with enterprise storage platforms. It provides the platform to create and manage a service that provisions storage in the form of block devices known as Cinder volumes.
 
@@ -124,7 +124,7 @@ It has the ability to copy (or snapshot) a server image and store. These stored 
 Glance has the following components:
 
 - `glance-api`, which accepts API calls for image discovery, retrieval and storage.
-- `glance-registry`, which stores, processes, and retrieves metadata information for images. 
+- `glance-registry`, which stores, processes, and retrieves metadata information for images.
 - `database`, which stores image metadata
 - `storage repository`, which integrates with various outside `OpenStack' components such as regular file systems, Amazon S3 and HTTP for image storages.
 
@@ -134,7 +134,7 @@ On a high level, a `Glance` architecture can be depicted as below:
 
 ## Ceilometer
 
-`Ceilometer` is the Metering/Monitoring Service of `OpenStack` deployments, which is basically used for billing, benchmarking, scalability, and statistics gathering. 
+`Ceilometer` is the Metering/Monitoring Service of `OpenStack` deployments, which is basically used for billing, benchmarking, scalability, and statistics gathering.
 
 This comes in handy when we need to retrieve usage data to help us optimize the utilization of our resources.
 
@@ -144,7 +144,7 @@ Following are the Basic Components of `Ceilometer'
 - `central agent`, which runs on central management server to poll for resource utilisation stats for resources not tied to instances or compute nodes
 - `collector`, which runs on one or more central management servers to monitor the message queues. These notification messages are then processed and turned in to metering messages and sent back to the message bus using the appropriate topics crerated. Normally, these metering messages are written to the data store without modification.
 - `datastore`, which are the databases which can handle concurrent writes from one or more collector instances and also can read from the API server.
-- `API server`, which runs on one or more central management servers to provide the required access to the data from the data store. 
+- `API server`, which runs on one or more central management servers to provide the required access to the data from the data store.
 
 It is to be noted that only the `collector` and `API servers` have access to the `datastore`.
 
@@ -156,13 +156,13 @@ On a high level, a `Ceilometer` architecture can be depicted as below:
 
 `Heat` is the main project in the `OpenStack Orchestration Program` and it implements an orchestration engine to launch multiple composite cloud applications based on the templates.
 
-A `Heat` template describes the infrastructure for a cloud application in a text file which can also be version controlled. 
+A `Heat` template describes the infrastructure for a cloud application in a text file which can also be version controlled.
 
 Resouces that can be described within `Heat` templates include, servers, floating ips, volumes, security groups, users, etc. `Heat` also provides an autoscaling service that integrates with `Ceilometer`.
 
 `Heat` manages the whole lifecycle of the application and when we need any changesm, we simply can modify the template and use it to update our existing stack. `Heat` will fugure out means to facilitate changes wherever required.
 
-`Heat` mainly manages infrastructure, however, `Heat` templates integrate well with other software configuration management tools such as `Puppet` and `Chef`. 
+`Heat` mainly manages infrastructure, however, `Heat` templates integrate well with other software configuration management tools such as `Puppet` and `Chef`.
 
 `Heat` is mainly a `Python` Project and consists of the following components:
 
@@ -177,7 +177,7 @@ Resouces that can be described within `Heat` templates include, servers, floatin
 
 ## LBaaS
 
-`LBaaS` which stands for Load Balancer as a Service is actually a service provided by the `Neutron` component. 
+`LBaaS` which stands for Load Balancer as a Service is actually a service provided by the `Neutron` component.
 
 `LBaaS` lets us to configure a load balancer which runs outside of our instances and directs traffic to our internal instances. We normally use `LBAAS` when we want to use multiple instances to reach our performance needs.
 
@@ -199,8 +199,12 @@ Below diagram, hopefully would give us an idea about how the various components 
 
  **Hope this was informative and please keep reading...**
 
+## The Remote Lab DevOps Offerings:
+ <iframe src="//www.slideshare.net/slideshow/embed_code/key/h9h9GNjX5Gncpi" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/bhalothia/the-remote-lab-devops-offerings" title="The Remote Lab DevOps Offerings" target="_blank">The Remote Lab DevOps Offerings</a> </strong> from <strong><a href="//www.slideshare.net/bhalothia" target="_blank">Virendra Bhalothia</a></strong> </div>
 
-#####Need DevOps help? - Get in touch with [The Remote Lab][1] 
+ Please leave your comments below if you have any doubts or questions.
+
+#####Need DevOps help? - Get in touch with [The Remote Lab][1]
 [LinkedIn][2] [Facebook][3] [Github][4] [Twitter][5]
 
 

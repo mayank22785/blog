@@ -33,7 +33,7 @@ PS: Next release will be called as `Mitaka`. It’s named after the town located
 
 ## Lets welcome `OpenStack Liberty`
 
-`OpenStack Liberty` is the 12th release of `OpenStack` and was released on October 15 2015. 
+`OpenStack Liberty` is the 12th release of `OpenStack` and was released on October 15 2015.
 
 Lets have a closer look at the major focus areas of `Liberty` before we dwell into individual projects
 
@@ -45,11 +45,11 @@ Lets have a closer look at the major focus areas of `Liberty` before we dwell in
 
 There has been Performance and stability improvements in `OpenStack` in general, and the Horizon dashboard, Neutron networking, Cinder block storage, and Nova compute services in particular.
 
-Nova Cells v2, which will eventually enable much larger multi-location compute deployments also makes its debut in Liberty and let me discuss this is detail later, 
+Nova Cells v2, which will eventually enable much larger multi-location compute deployments also makes its debut in Liberty and let me discuss this is detail later,
 
 ## Extensibility
 
-While `OpenStack` has reduced the `Core` components that must be supported, starting from Liberty, it is also moving in the direction of enabling the support of multiple other technologies under the Big Tent structure. 
+While `OpenStack` has reduced the `Core` components that must be supported, starting from Liberty, it is also moving in the direction of enabling the support of multiple other technologies under the Big Tent structure.
 
 ## Lets look at some of the Major Changes in the some of the Individual Project (Compoents) of `OpenStack Liberty`
 
@@ -95,8 +95,13 @@ While `OpenStack` has reduced the `Core` components that must be supported, star
 
  **Hope this was informative and please keep reading...**
 
+## The Remote Lab DevOps Offerings:
 
-#####Need DevOps help? - Get in touch with [The Remote Lab][1] 
+ <iframe src="//www.slideshare.net/slideshow/embed_code/key/h9h9GNjX5Gncpi" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/bhalothia/the-remote-lab-devops-offerings" title="The Remote Lab DevOps Offerings" target="_blank">The Remote Lab DevOps Offerings</a> </strong> from <strong><a href="//www.slideshare.net/bhalothia" target="_blank">Virendra Bhalothia</a></strong> </div>
+
+ Please leave your comments below if you have any doubts or questions.
+
+#####Need DevOps help? - Get in touch with [The Remote Lab][1]
 [LinkedIn][2] [Facebook][3] [Github][4] [Twitter][5]
 
 

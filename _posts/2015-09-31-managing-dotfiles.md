@@ -10,11 +10,11 @@ excerpt: "Manage the most important files on your system, like a boss."
 
 :metal:
 
-Hello world! This post is all about managing your dotfiles like a boss. 
+Hello world! This post is all about managing your dotfiles like a boss.
 
 ![likeaboss][10]
 
-I'm gonna talk about the importance of [dotfiles][6] and how to manage them effortlessly with version control systems. Due to whatever reasons, I changed 3 laptops in last few months and it was really hard for me to keep track of all my personal configuration files. 
+I'm gonna talk about the importance of [dotfiles][6] and how to manage them effortlessly with version control systems. Due to whatever reasons, I changed 3 laptops in last few months and it was really hard for me to keep track of all my personal configuration files.
 
 For example: `.bashrc`, `.gitconfig`,`.gitigignore`,`.vimrc` etcetera.
 
@@ -24,17 +24,17 @@ For example: `.bashrc`, `.gitconfig`,`.gitigignore`,`.vimrc` etcetera.
 
 Then **why not** my dotfiles? ~~I was doing something wrong.~~
 
-I wanted to fix this. Badly. 
+I wanted to fix this. Badly.
 
-> **Note**: If you spend any amount of time on terminal and want to automate the way you manage your various configuration settings, then this is a must have tutorial for you. 
+> **Note**: If you spend any amount of time on terminal and want to automate the way you manage your various configuration settings, then this is a must have tutorial for you.
 
 The problem is not versioning these files, but distributing across the workstations in use. Even if you make an interesting tweak in one of the git config files, it would either require you to copy that file or manually adding the same change in other locations, **which is a pain**.
 
-I looked around and found that many people are using version control systems as a centralized source to backup, restore, and sync their dotfiles, just like anything else. I also found that a lot of **[github repositories][6]** with tons of useful dotfiles are available publicly. That is the power of sharing. 
+I looked around and found that many people are using version control systems as a centralized source to backup, restore, and sync their dotfiles, just like anything else. I also found that a lot of **[github repositories][6]** with tons of useful dotfiles are available publicly. That is the power of sharing.
 
 > **However, if you are just starting off, so much amount of information could be confusing as well. Go slow.**
 
-Many people believe that dotfiles are meant to be forked, which is really good but you should know exactly what you are using. 
+Many people believe that dotfiles are meant to be forked, which is really good but you should know exactly what you are using.
 
 ### Playtime
 
@@ -43,10 +43,10 @@ I'm going to explain in detail how to manage your dotfiles in an automated and e
 - Fork a publicly available dotfiles repository
 - Customize it as per use
 - Install it by creating symlinks
-- Sync with the latest updates 
+- Sync with the latest updates
 - Push back changes as well
 
-## Fork a publicly available dotfiles repository 
+## Fork a publicly available dotfiles repository
 
 We are going to put all your dotfiles into git,  which means you’ll be able to use them on any OS X or Linux machine with Internet access. Misconfiguring your setup would not be your worst fear then and if you know basic git, you can setup a new workstation in less than 2 minutes.
 
@@ -65,7 +65,7 @@ Fine-tune your prompt, carefully plan your aliases, and write some pretty time-s
 
 ## Installation
 
-So, we will be putting all our dotfiles inside the `dotfiles` folder and we’ll create symlinks to them from our home directory. 
+So, we will be putting all our dotfiles inside the `dotfiles` folder and we’ll create symlinks to them from our home directory.
 
 ```
 cd ~/dotfiles
@@ -123,7 +123,7 @@ Sharing my `dotfiles` remote repositories:
 ## Pushing back changes to upstream
 
 
-- Make sure that your local repository is up-to-date with the upstream repository: 
+- Make sure that your local repository is up-to-date with the upstream repository:
 
 ``git fetch upstream``
 
@@ -137,9 +137,12 @@ Sharing my `dotfiles` remote repositories:
 
  **Hope this helps! Keep forking.**
 
-Please leave your comments below if you have any doubts or questions.
+ ## The Remote Lab DevOps Offerings:
+ <iframe src="//www.slideshare.net/slideshow/embed_code/key/h9h9GNjX5Gncpi" width="595" height="485" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:1px solid #CCC; border-width:1px; margin-bottom:5px; max-width: 100%;" allowfullscreen> </iframe> <div style="margin-bottom:5px"> <strong> <a href="//www.slideshare.net/bhalothia/the-remote-lab-devops-offerings" title="The Remote Lab DevOps Offerings" target="_blank">The Remote Lab DevOps Offerings</a> </strong> from <strong><a href="//www.slideshare.net/bhalothia" target="_blank">Virendra Bhalothia</a></strong> </div>
 
-#####Need DevOps help? - Get in touch with [The Remote Lab][1] 
+ Please leave your comments below if you have any doubts or questions.
+
+#####Need DevOps help? - Get in touch with [The Remote Lab][1]
 [LinkedIn][2] [Facebook][3] [Github][4] [Twitter][5]
 
 Credits: [John Glovier][8] for this beautiful [dotfiles logo][9]
