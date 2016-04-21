@@ -1,7 +1,7 @@
 
 __We are your remote lab!__
- 
-Our Mantra: We're on a mission to make DevOps hassle-free. 
+
+Our Mantra: We're on a mission to make DevOps hassle-free.
 
 __Enterprise DevOps__
 
@@ -13,6 +13,4 @@ We make sure we find the best tools, processes and people to deliver solutions t
 * Customized and collaborative approach
 * Best talent pool
 
-Say [hello](http://theremotelab.io) or check our [current openings](http://theremotelab.io/#careers)
-
-
+Say [hello](http://theremotelab.com) or check our [current openings](http://theremotelab.com/#careers)

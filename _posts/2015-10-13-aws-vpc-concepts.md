@@ -148,7 +148,7 @@ Credits: [Amazon VPC][6], [Amazon Blog][15], [AWS re:Invent][16]
 _Pradeep is DevOps extraordinaire. He's an AWS expert and loves sharing his knowledge. This is a guest post by him._
 
 
-  [1]: http://theremotelab.io
+  [1]: http://theremotelab.com
   [2]: https://www.linkedin.com/company/the-remote-lab
   [3]: https://www.facebook.com/TheRemoteLab
   [4]: https://github.com/TheRemoteLab

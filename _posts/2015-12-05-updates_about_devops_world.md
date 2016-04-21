@@ -248,7 +248,7 @@ Please leave your comments below if you have any doubts or questions.
 [98]: http://getbarkeep.org
 [99]: http://www.ubuntu.com/cloud/juju
 [100]: http://www.sublimetext.com
-[101]: http://theremotelab.io
+[101]: http://theremotelab.com
 [102]: https://www.linkedin.com/company/the-remote-lab
 [103]: https://www.facebook.com/TheRemoteLab
 [104]: https://github.com/TheRemoteLab

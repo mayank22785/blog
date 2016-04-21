@@ -105,7 +105,7 @@ While `OpenStack` has reduced the `Core` components that must be supported, star
 [LinkedIn][2] [Facebook][3] [Github][4] [Twitter][5]
 
 
-  [1]: http://theremotelab.io
+  [1]: http://theremotelab.com
   [2]: https://www.linkedin.com/company/the-remote-lab
   [3]: https://www.facebook.com/TheRemoteLab
   [4]: https://github.com/TheRemoteLab

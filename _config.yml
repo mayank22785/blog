@@ -1,7 +1,7 @@
 # Site settings
 title: The Remote Lab Blog
 baseurl: "/blog"
-url: "http://theremotelab.io"
+url: "http://theremotelab.com"
 twitter: TheRemoteLab
 github:  TheRemoteLab
 permalink: /:title/
@@ -23,7 +23,7 @@ defaults:
       path: ""      # empty string for all files
       type: posts   # limit to posts
     values:
-      is_post: true 
+      is_post: true
       comments: true
 
 gems:
