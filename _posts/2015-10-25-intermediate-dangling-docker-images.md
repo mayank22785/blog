@@ -104,12 +104,12 @@ Please leave your comments below if you have any doubts or questions.
 [LinkedIn][2] [Facebook][3] [Github][4] [Twitter][5]
 
 
-  [1]: http://theremotelab.io
+  [1]: http://theremotelab.com
   [2]: https://www.linkedin.com/company/the-remote-lab
   [3]: https://www.facebook.com/TheRemoteLab
   [4]: https://github.com/TheRemoteLab
   [5]: https://twitter.com/TheRemoteLab
-  [6]: http://theremotelab.io/blog/dockerfile-for-beginners/
+  [6]: http://theremotelab.com/blog/dockerfile-for-beginners/
   [7]: https://en.wikipedia.org/wiki/UnionFS
   [8]: http://docs.docker.com/introduction/understanding-docker/#how-does-a-docker-image-work
   [9]: https://docs.docker.com/machine/

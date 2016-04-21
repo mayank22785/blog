@@ -147,7 +147,7 @@ Sharing my `dotfiles` remote repositories:
 
 Credits: [John Glovier][8] for this beautiful [dotfiles logo][9]
 
-  [1]: http://theremotelab.io
+  [1]: http://theremotelab.com
   [2]: https://www.linkedin.com/company/the-remote-lab
   [3]: https://www.facebook.com/TheRemoteLab
   [4]: https://github.com/TheRemoteLab
