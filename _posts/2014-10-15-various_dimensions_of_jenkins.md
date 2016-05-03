@@ -112,7 +112,7 @@ This deployment job can also have some `Post Job` actions to take care of any po
 
 Please leave your comments below if you have any doubts or questions.
 
-#####Need DevOps help? - Get in touch with [The Remote Lab][1]
+**Need DevOps help? - Get in touch with** [The Remote Lab][1]
 [LinkedIn][2] [Facebook][3] [Github][4] [Twitter][5]
 
 

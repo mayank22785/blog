@@ -144,7 +144,7 @@ Here, we are summing it up in this blog post so that you have a single place to 
 
 Please leave your comments below if you have any doubts or questions.
 
-#####Need DevOps help? - Get in touch with [The Remote Lab][101]
+**Need DevOps help? - Get in touch with** [The Remote Lab][101]
 [LinkedIn][102] [Facebook][103] [Github][104] [Twitter][105]
 
 
