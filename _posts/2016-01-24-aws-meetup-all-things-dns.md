@@ -63,4 +63,4 @@ Please leave your comments below if you have any doubts or questions.
   [10]: https://twitter.com/jeevandongre
   [11]: http://www.meetup.com/awsugblr/events/228000779/
   [12]: https://s3-ap-southeast-1.amazonaws.com/trl-blog/trl-tools.jpg
-  [13]: https://letsdevops.slack.com/signup
+  [13]: http://letsdevops.herokuapp.com/
