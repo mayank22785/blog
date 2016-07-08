@@ -18,11 +18,12 @@ Evolution is an ongoing process.In the containers spectrum it has been a regular
 ![rkt-1 0-banner](https://cloud.githubusercontent.com/assets/8342133/16660420/ce24e2e0-448b-11e6-97b5-b56079d0f631.png)
 
 
-## About ACI's
+## About appc
+
+[appc][9] defines several independent but composable aspects involved in running application containers, including an image format, runtime environment, and discovery mechanism for application containers.It creates images known as ACI.ACI's full form is Application Container Image.You can think of it as a similar to [docker][6] Images.
 
 
-[ACI][] full form is Application Container Image.You can think of it as a similar to [docker][6] Images.Except it's not !
-It is a simple unix utility for constructing ACI manifests and container filesystems.Acbuild presents options for mapping ports, mounting filesystems, and specifying the base containers from which higher-level images are built — a dependency, in acbuild parlance.
+[acbuild][10] is a simple unix utility for constructing ACI manifests and container filesystems.[acbuild][10] presents options for mapping ports, mounting filesystems, and specifying the base containers from which higher-level images are built — a dependency, in [acbuild][10] parlance.
 
 Some of the features of ACI include:
 
@@ -31,57 +32,47 @@ Some of the features of ACI include:
 * Decentralization
 * Open Souce
 
-[appc][9] also defines several independent but composable aspects involved in running application containers, including an image format, runtime environment, and discovery mechanism for application containers.
 
 ![app-container-rkt-14-638](https://cloud.githubusercontent.com/assets/8342133/16660112/b66d8dc4-448a-11e6-916b-ff109cf64fe7.jpg)
 
 
 # Building ACI Images:
 
-Building aci images is easy to use with an awesome [acbuild][https://github.com/appc/acbuild] project.Using this project you can easily create your own aci images.Its under heavy development process and might change its workflow in the future.
+Building aci images is easy to use with an awesome [acbuild][10] project.Using this project you can easily create your own aci images.Its under heavy development process and might change its workflow in the future.By building aci images you can directly use them with rkt.Much as like you can use [docker][6] images with [docker][6].
 
 
-Before starting to use the acibuild you need to follow the steps:
-Download [acbuild][https://github.com/appc/acbuild/releases] package.
-and
+Before starting to use the acibuild you need to follow these steps:
 
-Here's how you can build ACI Images:
+<script src="https://gist.github.com/ramitsurana/6421a4bfb3425a6c018bff85ffcae0d3.js"></script>
 
-````
-# Starting ACI build
-acbuild begin
+Instead of running multiple commands on the terminal.I have decide to use one of the simple techniques to build an aci image.
+In this technique we use a shell script to automate the process of building an ACI.Using the shell script we can execute multiple [acbuild][10] commands.You can consider it as a similar way like using Dockerfile to build your [docker][6] images.
 
-# 
-acbuild set-name example.com/hello
-
-# Following Command
-acbuild copy hello /bin/hello
-
-# Commands
-acbuild set-exec /bin/hello
-
-# Naming the aci
-acbuild write hello-latest-linux-amd64.aci
-
-#Ending the process
-acbuild end
-
-````
 <script src="https://gist.github.com/ramitsurana/06f08da66dc9ec1c3a6299773bdaf4f0.js"></script>
+
+
+
+## Building rkt containers
+
+Here are the steps to follow:
+
+<script src="https://gist.github.com/ramitsurana/0a1c8e9f4af1b01e35c035c9b519564c.js"></script>
+
 
 ## How it works ?
 
 [rkt][8] works in multiple ways.Some of the most common ways include by using:
+
 * Url of aci image,
-* Using [Docker][6] registry
+* Using [docker][6] registry
 * Using quay.io
  
 
-But all of these include one common thing that is to use the aci images while building up the rkt containers.
-So I am going to discuss one of the most commonly used methods to build up rkt containers.In this method I am going to fetch a simple docker container from the docker registry and use it to build up a rkt container.
+But all of these include one common thing that is to use the aci images while building up the [rkt][8] containers.
+So I am going to discuss one of the most commonly used methods to build up [rkt][8] containers.In this method I am going to fetch a simple docker container from the [docker][6] registry and use it to build up a [rkt][8] container.
 
 ````
-rkt run --interactive docker://alpine --insecure-options=image
+rkt run --interactive docker://ubuntu --insecure-options=image
 
 ```` 
 
@@ -92,11 +83,6 @@ In the above command, we use `--interactive` flag for using the STDIN and STDOUT
 
 Basically what rkt does is simply pull the docker image from the registry.In every case you have to specify the registry using which you are pulling down the image.As per usage there are two popular options namely, docker registry and quay.io.After it fetches the image.A utility called as [docker2aci][] is used to convert these images to aci images.Then using this image the rkt container automatically brings up the rkt container.
 
-## Building rkt containers
-
-- Here are the steps to follow:
-
-<script src="https://gist.github.com/ramitsurana/0a1c8e9f4af1b01e35c035c9b519564c.js"></script>
 
 ## Garbage Collection
 
@@ -113,10 +99,10 @@ I have tried to summarise some of the commands that can be used while switching 
 
 Docker | rkt
 ------------ | -------------
-pull | fetch
-ps | list
-image list | images
---interactive | -i -t 
+docker pull | rkt fetch
+docker ps | rkt list
+docker images | rkt image list
+docker run -i -t | rkt run --interactive
 
 
 Hope you enjoyed this post,please tell us your opinions in the comments section below.
@@ -140,3 +126,4 @@ Hope you enjoyed this post,please tell us your opinions in the comments section 
   [7]: https://cloud.githubusercontent.com/assets/8342133/12071970/ed85ee72-b0ed-11e5-9a99-d4b0d8d8a36a.png
   [8]: http://coreos.com/rkt
   [9]: http://github.com/appc/spec
+  [10]: https://github.com/appc/acbuild	
