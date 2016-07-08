@@ -8,12 +8,12 @@ category: coreos rkt containers
 excerpt: "Exploring the rkt container ecosystem"
 ---
 
-Evolution is an ongoing process.In the containers spectrum it has been a regular custom to experiment with new stuff and make it better with time.Saying so one of the coolest evolving projects is the [rkt][8] project by Coreos guys.It is a substitute of the famous [docker][6] container project.It uses different methodology than the [docker][6] project.So I began exploring this awesome project and found out that its a really interesting approach on building containers.In this post I have shared some of my findings below:
+Evolution is an ongoing process.In the containers spectrum it has been a regular custom to experiment with new stuff and make it better with time.Saying so one of the coolest evolving projects is the [rkt][8] project by [Coreos][11] guys.It is a substitute of the famous [docker][6] container project.It uses different methodology than the [docker][6] project.So I began exploring this awesome project and found out that its a really interesting approach on building containers.In this post I have shared some of my findings below:
 
 
 ##  About rkt:
 
-[rkt][8] is an awesome project which started way back with a minor conflict of opinions on containers between the [Docker][6] guys and CoreOS guys.It is designed for security, simplicity, and composability within modern cluster architectures.[rkt][8] implements a modern, open, standard container format, the [App Container (appc)][9], but can also execute other container images, like those created with [docker][6].The most fundamental atomic unit in [rkt][8] is the pod, which is a group of related containers that share resources.One of the amazing things about [rkt][8] is that it is a single binary that integrates with init systems, scripts, and complex devops pipelines. Containers take their correct place in the PID heirachy and can be managed with standard utilities.
+[rkt][8] is an awesome project which started way back with a minor conflict of opinions on containers between the [Docker][6] guys and [CoreOS][11] guys.It is designed for security, simplicity, and composability within modern cluster architectures.[rkt][8] implements a modern, open, standard container format, the [App Container (appc)][9], but can also execute other container images, like those created with [docker][6].The most fundamental atomic unit in [rkt][8] is the pod, which is a group of related containers that share resources.One of the amazing things about [rkt][8] is that it is a single binary that integrates with init systems, scripts, and complex devops pipelines. Containers take their correct place in the PID heirachy and can be managed with standard utilities.
 
 ![rkt-1 0-banner](https://cloud.githubusercontent.com/assets/8342133/16660420/ce24e2e0-448b-11e6-97b5-b56079d0f631.png)
 
@@ -65,7 +65,7 @@ Here are the steps to follow:
 
 * Url of aci image,
 * Using [docker][6] registry
-* Using quay.io
+* Using [quay.io][12] registry
  
 
 But all of these include one common thing that is to use the aci images while building up the [rkt][8] containers.
@@ -81,7 +81,7 @@ In the above command, we use `--interactive` flag for using the STDIN and STDOUT
 ![rkt-work](https://cloud.githubusercontent.com/assets/8342133/16678420/85a9368a-44fc-11e6-9271-770ce896056c.png)
 
 
-Basically what rkt does is simply pull the docker image from the registry.In every case you have to specify the registry using which you are pulling down the image.As per usage there are two popular options namely, docker registry and quay.io.After it fetches the image.A utility called as [docker2aci][] is used to convert these images to aci images.Then using this image the rkt container automatically brings up the rkt container.
+Basically what rkt does is simply pull the docker image from the registry.In every case you have to specify the registry using which you are pulling down the image.As per usage there are two popular options namely, docker registry and [quay.io][12].After it fetches the image.A utility called as [docker2aci](https://github.com/appc/docker2aci) is used to convert these images to aci images.Then using this image the rkt container automatically brings up the rkt container.
 
 
 ## Garbage Collection
@@ -126,4 +126,6 @@ Hope you enjoyed this post,please tell us your opinions in the comments section 
   [7]: https://cloud.githubusercontent.com/assets/8342133/12071970/ed85ee72-b0ed-11e5-9a99-d4b0d8d8a36a.png
   [8]: http://coreos.com/rkt
   [9]: http://github.com/appc/spec
-  [10]: https://github.com/appc/acbuild	
+  [10]: https://github.com/appc/acbuild
+  [11]: http://coreos.com
+  [12]: http://quay.io
