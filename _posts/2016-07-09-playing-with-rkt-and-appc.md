@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Playing with rkt and appc"
-date: 2016-09-07
+date: 2016-07-09
 author: Ramit Surana
 tags: rkt aci docker
 category: coreos rkt containers
@@ -66,7 +66,7 @@ Here are the steps to follow:
 * Url of aci image,
 * Using [docker][6] registry
 * Using [quay.io][12] registry
- 
+
 
 But all of these include one common thing that is to use the aci images while building up the [rkt][8] containers.
 So I am going to discuss one of the most commonly used methods to build up [rkt][8] containers.In this method I am going to fetch a simple docker container from the [docker][6] registry and use it to build up a [rkt][8] container.
@@ -74,7 +74,7 @@ So I am going to discuss one of the most commonly used methods to build up [rkt]
 ````
 rkt run --interactive docker://ubuntu --insecure-options=image
 
-```` 
+````
 
 In the above command, we use `--interactive` flag for using the STDIN and STDOUT devices from your kernel.The `--insecure-options=image` is used because some of the docker images don't have image signature verification.This flag skips the trouble of verifying image.Behind the scenes here's a depiction of what happens:
 
