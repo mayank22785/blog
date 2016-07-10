@@ -13,7 +13,7 @@ Evolution is an ongoing process. In the containers spectrum it has been a regula
 In this post I have shared some of my findings below:
 
 
-##  About rkt:
+##  About rkt
 
 [rkt][8] is an awesome project which started way back with a minor conflict of opinions on containers between the [Docker][6] guys and [CoreOS][11] guys. It is designed for security, simplicity, and composability within modern cluster architectures. [rkt][8] implements a modern, open, standard container format, the [App Container (appc)][9], but can also execute other container images, like those created with [docker][6]. The most fundamental atomic unit in [rkt][8] is the pod, which is a group of related containers that share resources. One of the amazing things about [rkt][8] is that it is a single binary that integrates with init systems, scripts, and complex devops pipelines.  Containers take their correct place in the PID heirachy and can be managed with standard utilities.
 
@@ -32,13 +32,11 @@ Some of the features of ACI include:
 * Composable
 * Security
 * Decentralization
-* Open Souce
-
+* Open Source
 
 ![app-container-rkt-14-638](https://cloud.githubusercontent.com/assets/8342133/16660112/b66d8dc4-448a-11e6-916b-ff109cf64fe7.jpg)
 
-
-# Building ACI Images:
+# Building ACI Images
 
 Building aci images is easy to use with an awesome [acbuild][10] project. Using this project you can easily create your own aci images. Its under heavy development process and might change its workflow in the future. By building aci images you can directly use them with rkt. Much as like you can use [docker][6] images with [docker][6].
 
@@ -52,14 +50,11 @@ In this technique we use a shell script to automate the process of building an A
 
 <script src="https://gist.github.com/ramitsurana/06f08da66dc9ec1c3a6299773bdaf4f0.js"></script>
 
-
-
 ## Building rkt containers
 
 Here are the steps to follow:
 
 <script src="https://gist.github.com/ramitsurana/0a1c8e9f4af1b01e35c035c9b519564c.js"></script>
-
 
 ## How it works ?
 
@@ -74,16 +69,13 @@ But all of these include one common thing that is to use the aci images while bu
 
 ````
 rkt run --interactive docker://ubuntu --insecure-options=image
-
 ````
-
 In the above command, we use `--interactive` flag for using the STDIN and STDOUT devices from your kernel. The `--insecure-options=image` is used because some of the docker images don't have image signature verification. This flag skips the trouble of verifying image. Behind the scenes here's a depiction of what happens:
 
 ![rkt-work](https://cloud.githubusercontent.com/assets/8342133/16678420/85a9368a-44fc-11e6-9271-770ce896056c.png)
 
 
-Basically what rkt does is simply pull the docker image from the registry.In every case you have to specify the registry using which you are pulling down the image. As per usage there are two popular options namely, docker registry and [quay.io][12]. After it fetches the image. A utility called as [docker2aci](https://github.com/appc/docker2aci) is used to convert these images to aci images. Then using this image the rkt container automatically brings up the rkt container.
-
+Basically what [rkt][8] does is simply pull the [docker][6] image from the registry.In every case you have to specify the registry using which you are pulling down the image. As per usage there are two popular options namely, [docker][6] registry and [quay.io][12]. After it fetches the image. A utility called as [docker2aci](https://github.com/appc/docker2aci) is used to convert these images to aci images. Then using this image the rkt container automatically brings up the [rkt][8] container.
 
 ## Garbage Collection
 
@@ -91,20 +83,17 @@ This is one of the features that I love the most about [rkt][8] containers. In t
 
 <script src="https://gist.github.com/ramitsurana/e22d35562383600e5b68d645cd7a2c52.js"></script>
 
-## Switching from Docker to rkt:
+## Switching from Docker to rkt
 
 As a regular [Docker][6] user myself I find it hard to understand and use all the best of commands in [rkt][8].So
-I have tried to summarise some of the commands that can be used while switching from [docker][6] to [rkt][8] :
-
-
+I have tried to summarize some of the commands that can be used while switching from [docker][6] to [rkt][8] :
 
 Docker | rkt
------------- | -------------
+-------- | --------
 docker pull | rkt fetch
 docker ps | rkt list
 docker images | rkt image list
 docker run -i -t | rkt run --interactive
-
 
 Hope you enjoyed this post,please tell us your opinions in the comments section below.
 
