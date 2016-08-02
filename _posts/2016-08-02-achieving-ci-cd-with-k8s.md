@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Achieving CI/CD with Kubernetes"
-date: 2016-10-02
+date: 2016-08-02
 author: Ramit Surana
 tags: kubernetes jenkins docker fabric8 Continous Integration Delivery
 category: containers jenkins docker
