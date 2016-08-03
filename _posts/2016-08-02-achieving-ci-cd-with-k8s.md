@@ -8,16 +8,16 @@ category: containers jenkins docker
 excerpt: "Building CI/CD pipeline with kubernetes"
 ---
 
-Hola amigos !!(*In English - Hello Friends !!*) Hope you are having a jolly good day ! In terms of [Martin Fowler](http://www.martinfowler.com),Continous Integration can be defined as
+Hola amigos !!(*In English - Hello Friends !!*) Hope you are having a jolly good day ! Continous Integration/Delivery is best said in terms of [Martin Fowler](http://www.martinfowler.com),according to him it can be defined as,
 "Continuous Integration is a software development practice where members of a team integrate their work frequently, usually each person integrates at least daily - leading to multiple integrations per day. Each integration is verified by an automated build (including test) to detect integration errors as quickly as possible. Many teams find that this approach leads to significantly reduced integration problems and allows a team to develop cohesive software more rapidly."
 
-In this rather interesting piece of article we are going to discuss and explore two amazing and rather interesting pieces technology.One i.e. Jenkins,a popular Continous Integration/Deployment tool and Second i.e. Kubernetes.As an added bonus we are also going to discover fabric8 an awesome tool for microservices platform.So let's get started, 
+In this rather interesting piece of article we are going to discuss and explore two amazing and rather interesting pieces technology.One i.e. [Jenkins][7],a popular Continous Integration/Deployment tool and Second i.e. [Kubernetes][11],a popular orchestration engine for containers.As an added bonus we are also going to discover fabric8 an awesome tool for microservices platform.So let's get started, 
 
 **WARNING** Your machine may hang several times while performing the below steps.Choose a pc with high configuration.
 
 ## Methodology
 
-There are many methodology using which we can achieve CI/CD for the on our machine.Currently,in this article we are focussed on
+There are many methodologies using which we can achieve CI/CD for the on our machine.Currently,in this article we are focussed on
 
 * [Kubernetes-Jenkins Plugin](#kubernetes-jenkins-plugin)
 * [Fabric8](#fabric8)
@@ -34,7 +34,7 @@ Similarly while using [rkt][9] containers a.k.a rktnetes.Here's the architecture
 
 ![k8s-jenkins-rkt](https://cloud.githubusercontent.com/assets/8342133/16848756/ef5afe52-4a14-11e6-8723-a251b0b5c675.png)
 
-*Currently there is no plugin supported [rkt][9] containers.But I assume that the workflow will remain the same after its due implementation.* 
+*Currently there is no plugin supported for [rkt][9] containers by [jenkins][7].But I assume that the workflow will remain the same after its due implementation.* 
 
 ## Kubernetes-Jenkins Plugin
 
@@ -52,7 +52,7 @@ Although we are doing everything as we planned to do.We will still run into a pr
 
 ### A word about Data Containers
 
-Data is a tricky concept when it comes to containers.The containers are not very good example of keeping data secure and available all the time.There have been many incidents in the past where the containers have been seen to leak data.There are many ways to deal with such a problem.One is to use docker volumes.Due to some reasons,I did not found it that useful.One of the ways I found to deal with persistent storage is to crete another container,called as Data Container, and use it as a source of storing data instead of depending only one image.Here's a simple figure on how we plan to use the Data Container to ensure reliability of our data,
+Data is a tricky concept when it comes to containers.The containers are not very good example of keeping data secure and available all the time.There have been many incidents in the past where the containers have been seen to leak data.There are many ways to deal with such a problem.One is to use docker volumes.Due to some reasons,I did not found it that useful when used in terms of persistent storage.One of the ways I found to deal with persistent storage is to crete another container,called as Data Container, and use it as a source of storing data instead of depending only one image.Here's a simple figure on how we plan to use the Data Container to ensure reliability of our data,
 
 ![containers](https://cloud.githubusercontent.com/assets/8342133/17329686/54dab2e2-58e1-11e6-9ea8-15717dba3a2e.png)
 
@@ -82,7 +82,7 @@ Open http://localhost:8080 in your browser,you should see the below screen:
 ### Configuring settings for Kubernetes over Jenkins
 
 Now the jenkins is pre-configured with [kubernetes][11] plugin.So let's jump to the next step.Using the jenkins GUI go to
-**Manage Jenkins** -> **Configure System** -> **Cloud** -> **Add a new Cloud *** --> **Kubernetes**
+**Manage Jenkins** -> **Configure System** -> **Cloud** -> **Add a new Cloud** --> **Kubernetes**
 The screen looks like below after you have followed the above steps:
 
 
@@ -164,7 +164,7 @@ Similarly you can open the [fabric8][10] hawtio browser interface
 
 ![fabric8-console](https://cloud.githubusercontent.com/assets/8342133/17319603/62bcd1a4-58ac-11e6-90b4-4955f54d3274.png)
 
-From my analysis here's what happened when you run the following commands
+From my analysis here's a depiction of what happened when you ran the above commands.Below is a simple workflow diagram for the same.
 
 ![fabric8-layout](https://cloud.githubusercontent.com/assets/8342133/17319646/ac7e9f2a-58ac-11e6-9b0c-31bb993c950c.png)
 
@@ -174,7 +174,7 @@ Easier said than done,building [jenkins][7] from source and integrating [kuberne
 
 * [Pipeline Plugin](https://jenkins.io/solutions/pipeline/)
 
-This is a core plugin built by the [jenkins][7] community.This plugin ensures that you can easily integrate any orchestration engine with your enviorment with very less complexity.Currently this was started as different communities had started building different plugins for various orchestration engines.This created a mess of various plugins.Using this plugin users now can implement a project’s entire build/test/deploy pipeline in a Jenkinsfile and store that alongside their code, treating their pipeline as another piece of code to be checked into source control
+This is a core plugin built by the [jenkins][7] community.This plugin ensures that you can easily integrate any orchestration engine with your enviorment with very less complexity.Currently,I believe this was started as different communities had started building different plugins for various engines and they had to depend on majorly the [Jenkins][7] UI part to do so.Using this plugin users now can now directly implement there project’s entire build/test/deploy pipeline in a Jenkinsfile and store that alongside their code, treating their pipeline as another piece of code to be checked into source control
 
 * [Github Plugin](https://wiki.jenkins-ci.org/display/JENKINS/GitHub+Plugin)
 
